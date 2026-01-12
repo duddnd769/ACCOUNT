@@ -28,3 +28,9 @@ print(acc.account_number)
 print(acc.balance)
 
 
+⚠️ **중요**  
+```python  
+
+README Q1 설명 추가
+
+
