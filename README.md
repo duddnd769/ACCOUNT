@@ -1,11 +1,5 @@
 # account_projec!
 
-# account_project
-
-## Q1. Account 클래스 구현
-
-은행 계좌를 객체로 표현하기 위해 Account 클래스를 구현하였다.
-
 ### 📌 요구사항
 - 은행 이름: SC은행
 - 속성: 예금주, 계좌번호, 잔액
