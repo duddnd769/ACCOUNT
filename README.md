@@ -2,6 +2,9 @@ import random
 
 class Account:
 
+    # Q2. 클래스 변수 (생성된 계좌 개수 저장)
+    account_count = 0
+
     # Q1. Account 클래스 (은행이름, 예금주, 계좌번호, 잔액)
     def __init__(self, owner, balance):
         self.bank = "SC은행"
@@ -18,9 +21,6 @@ class Account:
     # Q1. 계좌 개설 메서드 (계좌번호 랜덤 생성)
     def _create_account_number(self):
         return f"{random.randint(100,999)}-{random.randint(10,99)}-{random.randint(100000,999999)}"
-
-    # Q2. 클래스 변수 (생성된 계좌 개수 저장)
-    account_count = 0
 
     # Q3. 클래스 변수 출력 메서드
     @classmethod
@@ -55,23 +55,20 @@ class Account:
             f"계좌번호: {self.account_number}, 잔고: {self.balance:,}원)"
         )
 
-    # Q8. 여러 객체 생성 (아래 테스트 코드에서 수행)
-    
-    # Q8. 여러 객체 생성
+    # Q10. 입금/출금 내역 출력 메서드
+    def show_history(self):
+        print("입금 내역:", self.deposit_log)
+        print("출금 내역:", self.withdraw_log)
+
+
+# Q8. 여러 객체 생성
 accounts = [
     Account("정영웅", 1_000_000),
     Account("홍길동", 500_000),
     Account("김철수", 2_000_000)
 ]
 
-    # Q9. 특정 고객 정보 출력 (아래 테스트 코드에서 수행)
-
 # Q9. 잔고 100만원 이상 고객 정보 출력
 for acc in accounts:
     if acc.balance >= 1_000_000:
         acc.display_info()
-        
-    # Q10. 입금/출금 내역 출력 메서드
-    def show_history(self):
-        print("입금 내역:", self.deposit_log)
-        print("출금 내역:", self.withdraw_log)
