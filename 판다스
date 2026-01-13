@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 scores = pd.Series({
     '김철수': 85,
     '이영희': 92,
@@ -8,5 +7,10 @@ scores = pd.Series({
     '최지연': 96
 })
 
-print(scores)
+scores["이영희"]
 
+scores[scores >= 90]
+
+
+
+(scores + 5)
